@@ -1,0 +1,10 @@
+int main()
+{
+	if (isValid == 0) { 
+		int x, z;
+		x = 10;
+		z = 15;
+		int soma = x + z;
+		return 0;
+	}
+}

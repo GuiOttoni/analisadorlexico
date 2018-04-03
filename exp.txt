@@ -1,0 +1,56 @@
+----------BEGIN SUMMARY---------- 
+***Note format: token (line #) 
+
+Total 5 KEYWORDS found are: 
+<int,key> Line: 1 
+<if,key> Line: 3 
+<int,key> Line: 4 
+<int,key> Line: 7 
+<return,key> Line: 8 
+***/END KEYWORD SUMMARY*** 
+
+Total 9 IDENTIFIERS found are: 
+main 	 (line #1) 
+isValid 	 (line #3) 
+x 	 (line #4) 
+z 	 (line #4) 
+x 	 (line #5) 
+z 	 (line #6) 
+soma 	 (line #7) 
+x 	 (line #7) 
+z 	 (line #7) 
+***/END IDENTIFIER SUMMARY*** 
+
+Total 4 NUMBERS found are: 
+0 	 (line #3) 
+10 	 (line #5) 
+15 	 (line #6) 
+0 	 (line #8) 
+***/END NUMBER SUMMARY*** 
+
+Total 14 DELIMITERS found are: 
+( 	 (line #1) 
+) 	 (line #1) 
+{ 	 (line #2) 
+( 	 (line #3) 
+) 	 (line #3) 
+{ 	 (line #3) 
+, 	 (line #4) 
+; 	 (line #4) 
+; 	 (line #5) 
+; 	 (line #6) 
+; 	 (line #7) 
+; 	 (line #8) 
+} 	 (line #9) 
+} 	 (line #10) 
+***/END DELIMITER SUMMARY*** 
+
+Total 1 RELATIONAL OPERATORS found are: 
+== 	 (line #3) 
+***/END RELATIONAL OPERATOR SUMMARY*** 
+
+Total 1 OTHER OPERATORS found are: 
++ 	 (line #7) 
+***/END OTHER OPERATOR SUMMARY*** 
+
+----------/END SUMMARY----------- 
