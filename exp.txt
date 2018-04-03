@@ -30,5 +30,5 @@
 <;,DELIM> Line: 8 
 <},DELIM> Line: 9 
 <},DELIM> Line: 10 
-<+,OTHER_OP> Line: 7 
+<+,OTH_OP> Line: 7 
 <==,REL_OP> Line: 3 

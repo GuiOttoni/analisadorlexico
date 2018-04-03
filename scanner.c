@@ -97,11 +97,13 @@ TokenType getTokenType(FILE *filePtr) {
 
 	FILE *fptr;
 	fptr = fopen("symbol.txt","w");
-	fprintf(fptr,"Token \t| Pattern \t| lexeme \t|\n");
-    fprintf(fptr,"KEY \t| Pattern \t| lexeme \t|\n");
-    fprintf(fptr,"ID \t| Pattern \t| lexeme \t|\n");
-    fprintf(fptr,"Token \t| Pattern \t| lexeme \t|\n");
-    fprintf(fptr,"Token \t| Pattern \t| lexeme \t|\n");
+	fprintf(fptr,"Token\t| Pattern\t\t| Lexeme\t|\n");
+    fprintf(fptr,"KEY\t| Palavras-chave do sistema\t\t| int, if, printf, while e etc\t|\n");
+    fprintf(fptr,"ID\t| Letra seguida por letras ou/e digitos\t\t| variaveis em geral\t|\n");
+    fprintf(fptr,"NUM\t| Numeros\t\t| 0,25,36...\t|\n");
+    fprintf(fptr,"DELIM\t| Unico caracter especial\t\t| (,),{,},[,] e etc\t|\n");
+    fprintf(fptr,"OTH_OP\t| Caracter unico\t\t| +, -, * e etc\t|\n");
+    fprintf(fptr,"REL_OP\t| Carecter seguido por outro carecter\t\t| ==, <=, >=, != e etc\t|\n");
 
 	return EOT; // end of token
 }
@@ -125,7 +127,7 @@ void printSummary() {
 	printLexemeChar(fptr, delims, delimLineNums, delimi, "DELIM"); //CHAR
 
 	//fprintf(fptr,"\nTotal %d OTHER OPERATORS found are: \n", relOpi);
-	printLexemeChar(fptr, otherOps, otherOpLineNums, otherOpi, "OTHER_OP"); //CHAR
+	printLexemeChar(fptr, otherOps, otherOpLineNums, otherOpi, "OTH_OP"); //CHAR
 
 	//fprintf(fptr,"\nTotal %d RELATIONAL OPERATORS found are: \n", relOpi);
 	printLexemeString(fptr, relOps, relOpLineNums, relOpi, "REL_OP");

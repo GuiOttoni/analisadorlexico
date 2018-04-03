@@ -1,5 +1,7 @@
-Token 	| Pattern 	| lexeme 	|
-KEY 	| Pattern 	| lexeme 	|
-ID 	| Pattern 	| lexeme 	|
-Token 	| Pattern 	| lexeme 	|
-Token 	| Pattern 	| lexeme 	|
+Token	| Pattern		| Lexeme	|
+KEY	| Palavras-chave do sistema		| int, if, printf, while e etc	|
+ID	| Letra seguida por letras ou/e digitos		| variaveis em geral	|
+NUM	| Numeros		| 0,25,36...	|
+DELIM	| Unico caracter especial		| (,),{,},[,] e etc	|
+OTH_OP	| Caracter unico		| +, -, * e etc	|
+REL_OP	| Carecter seguido por outro carecter		| ==, <=, >=, != e etc	|
