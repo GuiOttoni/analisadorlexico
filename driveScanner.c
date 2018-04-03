@@ -61,7 +61,10 @@ int main(int argc, char *argv[])
 
 	/*---------Begin Job-------------*/
 	TokenType tokenType = UNDEF;
-	while ((tokenType = getTokenType(filePtr)) != EOT) {}
+	while ((tokenType = getTokenType(filePtr)) != EOT)
+    {
+
+	}
 	/*---------/End Job-------------*/
 
 	fclose(filePtr);

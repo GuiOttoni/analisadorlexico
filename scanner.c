@@ -97,6 +97,11 @@ TokenType getTokenType(FILE *filePtr) {
 
 	FILE *fptr;
 	fptr = fopen("symbol.txt","w");
+	fprintf(fptr,"Token \t| Pattern \t| lexeme \t|\n");
+    fprintf(fptr,"KEY \t| Pattern \t| lexeme \t|\n");
+    fprintf(fptr,"ID \t| Pattern \t| lexeme \t|\n");
+    fprintf(fptr,"Token \t| Pattern \t| lexeme \t|\n");
+    fprintf(fptr,"Token \t| Pattern \t| lexeme \t|\n");
 
 	return EOT; // end of token
 }
@@ -108,23 +113,22 @@ void printSummary() {
     fptr = fopen("exp.txt","w");
 
 	//fprintf(fptr,"Total %d KEYWORDS found are: \n", keyi);
-	printKeywords(fptr);
-
+	printLexemeString(fptr, keys, keyLineNums, keyi, "KEY"); //TODO: CHANGE LAST ARGUMENT
 
 	//fprintf(fptr,"\nTotal %d IDENTIFIERS found are: \n", ideni);
-	printIdentifiers(fptr);
+    printLexemeString(fptr, idens, idenLineNums, ideni, "ID");
 
 	//fprintf(fptr,"\nTotal %d NUMBERS found are: \n", numi);
-	printNumbers(fptr);
+	printLexemeString(fptr,nums,numLineNums, numi, "NUM");
 
 	//fprintf(fptr,"\nTotal %d DELIMITERS found are: \n", delimi);
-	printDelimiters(fptr);
-
-	//fprintf(fptr,"\nTotal %d RELATIONAL OPERATORS found are: \n", relOpi);
-	printRelationalOperators(fptr);
+	printLexemeChar(fptr, delims, delimLineNums, delimi, "DELIM"); //CHAR
 
 	//fprintf(fptr,"\nTotal %d OTHER OPERATORS found are: \n", relOpi);
-	printOtherOperators(fptr);
+	printLexemeChar(fptr, otherOps, otherOpLineNums, otherOpi, "OTHER_OP"); //CHAR
+
+	//fprintf(fptr,"\nTotal %d RELATIONAL OPERATORS found are: \n", relOpi);
+	printLexemeString(fptr, relOps, relOpLineNums, relOpi, "REL_OP");
 }
 
 int isStartRelationalOperator(char c) {
@@ -166,14 +170,23 @@ int isKeyword(char *str) {
 	return result;
 }
 
-void printOtherOperators(FILE *filePtr) {
+void printLexemeString(FILE *filePtr,char ar[LIMIT][MAX],int *_arr, int lexi, char *TypeOfToken){
 	int i;
-	for (i = 0; i < otherOpi; i++) {
-		fprintf(filePtr,"%c \t (line #%d) \n", otherOps[i], otherOpLineNums[i]);
+	for (i = 0; i < lexi; i++) {
+		fprintf(filePtr,"<%s,%s> Line: %d \n", ar[i],TypeOfToken, _arr[i]);
 	}
 }
 
-void printDelimiters(FILE *filePtr) {
+void printLexemeChar(FILE *filePtr,char *ar,int *_arr, int lexi, char *TypeOfToken){
+	int i;
+	for (i = 0; i < lexi; i++) {
+		fprintf(filePtr,"<%c,%s> Line: %d \n", ar[i], TypeOfToken, _arr[i]);
+	}
+}
+
+
+
+/* void printDelimiters(FILE *filePtr) {
 	int i;
 	for (i = 0; i < delimi; i++) {
 		fprintf(filePtr,"%c \t (line #%d) \n", delims[i], delimLineNums[i]);
@@ -198,23 +211,23 @@ void printWords(FILE *filePtr) {
 void printKeywords(FILE *filePtr) {
 	int i;
 	for (i = 0; i < keyi; i++) {
-		fprintf(filePtr,"<%s,key> Line: %d \n", keys[i], keyLineNums[i]);
+		fprintf(filePtr,"<%s,KEY> Line: %d \n", keys[i], keyLineNums[i]);
 	}
 }
 
 void printNumbers(FILE *filePtr) {
 	int i;
 	for (i = 0; i < numi; i++) {
-		fprintf(filePtr,"%s \t (line #%d) \n", nums[i], numLineNums[i]);
+		fprintf(filePtr,"<%s \t (line #%d) \n", nums[i], numLineNums[i]);
 	}
 }
 
 void printIdentifiers(FILE *filePtr) {
 	int i;
 	for (i = 0; i < ideni; i++) {
-		fprintf(filePtr,"%s \t (line #%d) \n", idens[i], idenLineNums[i]);
+		fprintf(filePtr,"<%s \t (line #%d) \n", idens[i], idenLineNums[i]);
 	}
-}
+} */
 
 void splitWords() {
 	int i;

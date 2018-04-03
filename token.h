@@ -13,8 +13,8 @@ typedef enum {
 	DELIM,		// such as . (  ) , { } ; [ ]
 
 	UNDEF,		// undefined
-	EOT 		// end of token
-/*
+	EOT, 		// end of token
+
 	REL_OP_EQUAL, // ==
 	REL_OP_GREATER, // >
 	REL_OP_LESS_THAN, // <
@@ -38,8 +38,8 @@ typedef enum {
 	DELIM_RIHGT_BRACE, // }
 	DELIM_LEFT_BRACKET, // [
 	DELIM_RIGHT_BRACKET, // ]
-	DELIM_SEMICOLON, // ;
-*/
+	DELIM_SEMICOLON // ;
+
 
 } TokenType;
 

@@ -6,17 +6,14 @@ int isExAcceptableChar(char);
 int isDelimiter(char);
 int isOtherOperators(char);
 int isStartRelationalOperator(char);
+int isRepeated(char);
 
 void printToken(Token *); // func prototype
 void splitWords();
-void printWords();
-void printKeywords();
-void printNumbers();
-void printIdentifiers();
-void printDelimiters();
-void printOtherOperators();
-void printRelationalOperators();
+void printLexemeString();
+void printLexemeChar();
 void printSummary();
+
 
 #endif
 

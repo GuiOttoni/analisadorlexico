@@ -1,0 +1,5 @@
+Token 	| Pattern 	| lexeme 	|
+KEY 	| Pattern 	| lexeme 	|
+ID 	| Pattern 	| lexeme 	|
+Token 	| Pattern 	| lexeme 	|
+Token 	| Pattern 	| lexeme 	|

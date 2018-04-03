@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1522785313 source:c:\git\trad\drivescanner.c
+1522795957 source:c:\git\trad\drivescanner.c
 	<stdio.h>
 	<ctype.h>
 	"token.h"
 	"scanner.h"
 
-1522782615 c:\git\trad\token.h
+1522795782 c:\git\trad\token.h
 
-1522782605 c:\git\trad\scanner.h
+1522797461 c:\git\trad\scanner.h
 
 1522782601 source:c:\git\trad\scanner.c
 	<stdio.h>
