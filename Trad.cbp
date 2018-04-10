@@ -31,9 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="driveScanner.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="scanner.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="scanner.h" />
+		<Unit filename="symdef.h" />
+		<Unit filename="token.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
